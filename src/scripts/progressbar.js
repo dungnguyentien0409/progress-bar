@@ -52,15 +52,20 @@ function parseData(response) {
 }
 
 function generateProgressBars() {
-    for(var bar of bars) {
+    for(var i = 0; i < bars.length; i++) {
+        var bar = bars[i];
         var progress = document.createElement("div");
         progress.setAttribute('class', 'w3-light-grey margin');
 
         var progressBar = document.createElement("div");
         progressBar.setAttribute("id", bar.id);
-        progressBar.setAttribute("class", "w3-container w3-light-blue w3-center slider");
+        progressBar.setAttribute("class", "w3-container w3-light-blue w3-center");
         progressBar.setAttribute("style", "width:" + bar.percentage + "%");
         progressBar.innerHTML = bar.percentage + "%";
+
+        if (i == 0) {
+            progressBar.className += " selectedProgress";
+        }
 
         progress.appendChild(progressBar);
         container.appendChild(progress);
@@ -80,11 +85,14 @@ function generateSelection() {
 
         if (i == 0) {
             option.setAttribute("selected", "selected");
-            option.setAttribute("class", "selectedProgress");
         }
 
         combobox.appendChild(option);
     }
+
+    combobox.addEventListener("change", function() {
+        onChangeSelection();
+    })
     container.appendChild(combobox);
 }
 
@@ -120,12 +128,22 @@ function onClick(value) {
     }
 }
 
+function onChangeSelection() {
+    removeSelectedCss();
+
+    var e = document.getElementById("selectProgressBar");
+    var id = e.options[e.selectedIndex].value;
+    var progressBar = document.getElementById(id);
+
+    progressBar.className += " selectedProgress";
+}
+
 function removeSelectedCss() {
     var items = document.getElementsByClassName("selectedProgress");
-
+    console.log(items.length);
     for (var i = 0; i < items.length; i++) {
         var item = items[i];
-        item.removeAttribute("selectedProgress");
+        item.classList.remove("selectedProgress");
     }
 }
 
