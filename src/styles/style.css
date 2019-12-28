@@ -2,6 +2,10 @@
 	margin: 8px;
 }
 
+.noPadding {
+	padding: 0px;
+}
+
 .container {
 	width: 50%;
 	position: absolute;

@@ -59,7 +59,7 @@ function generateProgressBars() {
 
         var progressBar = document.createElement("div");
         progressBar.setAttribute("id", bar.id);
-        progressBar.setAttribute("class", "w3-container w3-light-blue w3-center");
+        progressBar.setAttribute("class", "w3-container w3-light-blue w3-center noPadding");
         progressBar.setAttribute("style", "width:" + bar.percentage + "%");
         progressBar.innerHTML = bar.percentage + "%";
 
