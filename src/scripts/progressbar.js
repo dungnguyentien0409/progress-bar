@@ -31,8 +31,8 @@ function generate() {
     title.setAttribute("class", "title margin");
     container.appendChild(title);
 
-    generateProgressBars();
     generateSelection();
+    generateProgressBars();
     generateButton();
 }
 
@@ -55,11 +55,11 @@ function generateProgressBars() {
     for(var i = 0; i < bars.length; i++) {
         var bar = bars[i];
         var progress = document.createElement("div");
-        progress.setAttribute('class', 'w3-light-grey margin');
+        progress.setAttribute('class', 'progress margin');
 
         var progressBar = document.createElement("div");
         progressBar.setAttribute("id", bar.id);
-        progressBar.setAttribute("class", "w3-container w3-light-blue w3-center noPadding");
+        progressBar.setAttribute("class", "w3-container progress-bar w3-center noPadding");
         progressBar.setAttribute("style", "width:" + bar.percentage + "%");
         progressBar.innerHTML = bar.percentage + "%";
 
@@ -73,9 +73,12 @@ function generateProgressBars() {
 }
 
 function generateSelection() {
-    var combobox = document.createElement("select");
-    combobox.setAttribute("id", "selectProgressBar");
-    combobox.setAttribute("class", "combobox margin")
+    var selectContainer = document.createElement("div");
+    selectContainer.setAttribute("class", "select-container");
+
+    var select = document.createElement("select");
+    select.setAttribute("id", "selectProgressBar");
+    select.setAttribute("class", "select margin")
 
     for (var i = 0; i < bars.length; i++) {
         var bar = bars[i];
@@ -87,27 +90,34 @@ function generateSelection() {
             option.setAttribute("selected", "selected");
         }
 
-        combobox.appendChild(option);
+        select.appendChild(option);
     }
 
-    combobox.addEventListener("change", function() {
+    select.addEventListener("change", function() {
         onChangeSelection();
     })
-    container.appendChild(combobox);
+
+    selectContainer.appendChild(select);
+    container.appendChild(selectContainer);
 }
 
 function generateButton() {
+    var btnContainer = document.createElement("div");
+    btnContainer.setAttribute("class", "button-container");
+
     for (let value of buttons) {
         var button = document.createElement("button");
-        button.setAttribute("class", "button margin");
+        button.setAttribute("class", "button");
         button.innerHTML = value;
 
         button.addEventListener ("click", function() {
             onClick(value)
         });
 
-        container.appendChild(button);
+        btnContainer.appendChild(button);
     }
+
+    container.appendChild(btnContainer);
 }
 
 function onClick(value) {
@@ -118,10 +128,21 @@ function onClick(value) {
     for (var bar of bars) {
         if (bar.id == id) {
             bar.percentage += parseInt(value);
-            if (bar.percentage > 100) bar.percentage = 100;
-            else if (bar.percentage < 0) bar.percentage = 0;
-
-            progressBar.style.width = bar.percentage + "%";
+            progressBar.classList.remove("over100");
+           
+            if (bar.percentage > 100) {
+                progressBar.className += " over100";
+            }
+            else if (bar.percentage < 0) {
+                bar.percentage = 0;
+            }
+            
+            if (bar.percentage > 100) {
+                progressBar.style.width = 100 + "%";
+            }
+            else {
+                progressBar.style.width = bar.percentage + "%";
+            }
             progressBar.innerHTML = bar.percentage + "%";
             break;
         }

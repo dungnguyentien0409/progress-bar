@@ -1,0 +1,22 @@
+.selectedProgress {
+    border-bottom: 3px outset;
+    background-color: #51b8e1 !important;
+	transition-property: all;
+	transition-duration: .6s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.over100 {
+	background-color: #ff5722 !important;
+}
+
+.progress-bar {
+	color: #000;
+	background-color: #87CEEB;
+	text-align: center
+}
+
+.progress {
+	color: #000;
+    background-color: #f1f1f1;
+}
