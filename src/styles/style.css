@@ -1,0 +1,28 @@
+.margin {
+	margin: 8px;
+}
+
+.container {
+	width: 50%;
+	position: absolute;
+	left: 25%;
+	background-color: #d9e6f2;
+}
+
+.title {
+	text-align: center;
+	font-weight: bold;
+}
+
+.button {
+	width: 60px;
+}
+
+.combobox {
+	width: 130px;
+    height: 28px;
+}
+
+.selectedProgress {
+	border-style: outset;
+}
