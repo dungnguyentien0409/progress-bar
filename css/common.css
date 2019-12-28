@@ -1,0 +1,16 @@
+.margin {
+  margin: 8px; }
+
+.noPadding {
+  padding: 0px; }
+
+.container {
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  background-color: #d9e6f2;
+  padding: 5px; }
+
+.title {
+  text-align: center;
+  font-weight: bold; }
