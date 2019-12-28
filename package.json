@@ -6,12 +6,11 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch src/styles -o css"
+    "scss": "node-sass --watch src/styles/scss -o src/styles/css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.4.1",
     "node-sass": "^4.13.0"
   }
 }
