@@ -25,4 +25,7 @@
 
 .selectedProgress {
 	border-style: outset;
+	transition-property: all;
+	transition-duration: .8s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
