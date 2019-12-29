@@ -59,15 +59,20 @@ function generateProgressBars() {
 
         var progressBar = document.createElement("div");
         progressBar.setAttribute("id", bar.id);
-        progressBar.setAttribute("class", "w3-container progress-bar w3-center noPadding");
+        progressBar.setAttribute("class", "w3-container progress-bar noPadding");
         progressBar.setAttribute("style", "width:" + bar.percentage + "%");
-        progressBar.innerHTML = bar.percentage + "%";
+
+        var percentage = document.createElement("div");
+        percentage.setAttribute("id", bar.id + "percentage");
+        percentage.setAttribute("class", "percentage");
+        percentage.innerHTML = bar.percentage + "%";
 
         if (i == 0) {
             progressBar.className += " selectedProgress";
         }
 
         progress.appendChild(progressBar);
+        progress.appendChild(percentage);
         container.appendChild(progress);
     }
 }
@@ -124,7 +129,8 @@ function onClick(value) {
     var e = document.getElementById("selectProgressBar");
     var id = e.options[e.selectedIndex].value;
     var progressBar = document.getElementById(id);
-    
+    var percentage = document.getElementById(id + "percentage");
+
     for (var bar of bars) {
         if (bar.id == id) {
             bar.percentage += parseInt(value);
@@ -143,7 +149,7 @@ function onClick(value) {
             else {
                 progressBar.style.width = bar.percentage + "%";
             }
-            progressBar.innerHTML = bar.percentage + "%";
+            percentage.innerHTML = bar.percentage + "%";
             break;
         }
     }

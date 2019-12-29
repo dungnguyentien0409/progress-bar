@@ -9,9 +9,23 @@
   background-color: #ff5722 !important; }
 
 .progress-bar {
+  position: absolute;
   color: black;
   background-color: #87CEEB;
-  text-align: center; }
+  text-align: center;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  padding: 10px; }
 
 .progress {
-  background-color: #f1f1f1; }
+  background-color: #f1f1f1;
+  position: relative;
+  width: 98%;
+  height: 24px; }
+
+.percentage {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100; }
