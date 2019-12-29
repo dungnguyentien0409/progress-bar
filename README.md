@@ -9,7 +9,7 @@ The data is read from the endpoint: http://pb-api.herokuapp.com/bars
 I also include the node_modules
 
 To run it, please get all and open the index.html
-And that's all step
+and that's all step
 
 # Contact
 Linkedin: https://www.linkedin.com/in/dun-nguyen-9623b014b/
