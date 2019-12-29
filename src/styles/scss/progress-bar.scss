@@ -5,11 +5,13 @@
 		.progress-bar {
 			background-color: $sky;
 		}
-		.selectedProgress {
-			background-color: $dark-sky !important;
-		}
 		.over100 {
 			background-color: $orange !important;
+		}
+	}
+	.progress:hover {
+		.progress-bar {
+			background-color: $dark-sky;
 		}
 	}
 }
@@ -19,11 +21,13 @@
 		.progress-bar {
 			background-color: $yellow;
 		}
-		.selectedProgress {
-			background-color: $dark-yellow !important;
-		}
 		.over100 {
 			background-color: $orange !important;
+		}
+	}
+	.progress:hover {
+		.progress-bar {
+			background-color: $dark-yellow;
 		}
 	}
 }
@@ -34,11 +38,13 @@
 		.progress-bar {
 			background-color: $green;
 		}
-		.selectedProgress {
-			background-color: $dark-green !important;
-		}
 		.over100 {
 			background-color: $orange !important;
+		}
+	}
+	.progress:hover {
+		.progress-bar {
+			background-color: $dark-green;
 		}
 	}
 }
@@ -73,8 +79,4 @@
 		height: 100;
 		text-shadow: -1px 0 $light-grey, 0 1px $light-grey, 1px 0 $light-grey, 0 -1px $light-grey;
 	}
-}
-
-.progress:hover {
-	border-left: 5px outset $light-grey;
 }
