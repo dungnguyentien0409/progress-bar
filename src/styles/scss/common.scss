@@ -8,21 +8,31 @@
 	padding: 0px;
 }
 
-.container {
-	width: 50%;
-	position: absolute;
-	left: 25%;
-	background-color: $blue-grey;
-	padding: 5px;
-	position: relative;
-}
-
 .title {
 	text-align: center;
 	font-weight: bold;
 	position: relative;
 }
 
+.container {
+	width: 50%;
+	position: absolute;
+	left: 25%;
+	padding: 5px;
+	position: relative;
+}
+
+.blue {
+	background-color: $blue-grey;
+}
+
+.yellow {
+	background-color: $yellow-grey;
+}
+
+.green {
+	background-color: $green-grey;
+}
 
 
 

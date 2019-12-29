@@ -1,11 +1,12 @@
 const app = document.getElementById('root');
 var container;
+var currentTheme;
 
 (function() {
     //var div = document.getElementById("root");
     //div.innerHTML = "abc1";
     container = document.createElement("div");
-    container.setAttribute("class", "container");
+    container.setAttribute("class", "container blue");
     app.appendChild(container);
 
     getBars();
@@ -26,11 +27,8 @@ function getBars() {
 }
 
 function generate() {
-    var title = document.createElement("h3");
-    title.innerHTML = "Progress Bars Demo";
-    title.setAttribute("class", "title margin");
-    container.appendChild(title);
-
+    generateThemeOption();
+    generateTitle();
     generateSelection();
     generateProgressBars();
     generateButton();
@@ -49,6 +47,50 @@ function parseData(response) {
 
         bars.push(item);
     }
+}
+
+function generateTitle() {
+    var title = document.createElement("h3");
+    title.innerHTML = "Progress Bars Demo";
+    title.setAttribute("class", "title margin");
+    container.appendChild(title);
+}
+
+function generateThemeOption() {
+    var theme = document.createElement("div");
+    theme.setAttribute("class", "theme");
+    var title = document.createElement("label");
+    title.innerHTML = "Theme: ";
+    theme.appendChild(title);
+
+    var colors = ["blue", "yellow", "green"];
+
+    for (var i = 0; i < colors.length; i++) {
+        var color = colors[i];
+        var radio = document.createElement("input");
+        radio.setAttribute("name", "radioTheme");
+        radio.setAttribute("type", "radio");
+        radio.setAttribute("value", color);
+        radio.setAttribute("class", "radio");
+        if (i == 0) {
+            //default value
+            currentTheme = color;
+            radio.setAttribute("checked", "checked");
+        }
+
+        radio.addEventListener("click", function() {
+            changeTheme(this.value);
+        });
+        
+        var label = document.createElement("label");
+        label.setAttribute("class", "label-" + color);
+        label.innerHTML = color;
+
+        theme.appendChild(radio);
+        theme.appendChild(label);
+    }
+
+    container.appendChild(theme);
 }
 
 function generateProgressBars() {
@@ -115,7 +157,7 @@ function generateButton() {
         button.setAttribute("class", "button");
         button.innerHTML = value;
 
-        button.addEventListener ("click", function() {
+        button.addEventListener("click", function() {
             onClick(value)
         });
 
@@ -123,6 +165,15 @@ function generateButton() {
     }
 
     container.appendChild(btnContainer);
+}
+
+function changeTheme(color) {
+    if (color != currentTheme) {
+        container.classList.remove(currentTheme);
+
+        currentTheme = color;
+        container.className += (" " + color);
+    }
 }
 
 function onClick(value) {

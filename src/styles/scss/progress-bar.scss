@@ -1,38 +1,76 @@
 @import 'color';
 
-.selectedProgress {
-    border-bottom: 3px outset;
-    background-color: $dark-sky !important;
-	transition-property: all;
-	transition-duration: .6s;
-	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+.blue {
+	.progress {
+		.progress-bar {
+			background-color: $sky;
+		}
+		.selectedProgress {
+			background-color: $dark-sky !important;
+		}
+		.over100 {
+			background-color: $orange !important;
+		}
+	}
 }
 
-.over100 {
-	background-color: $orange !important;
+.yellow {
+	.progress {
+		.progress-bar {
+			background-color: $yellow;
+		}
+		.selectedProgress {
+			background-color: $dark-yellow !important;
+		}
+		.over100 {
+			background-color: $orange !important;
+		}
+	}
 }
 
-.progress-bar {
-	position: absolute;
-	color: $black;
-	background-color: $sky;
-	text-align: center;
-	opacity: 1;
-	width: 100%;
-	height: 100%;
-	padding: 10px;
+.green {
+	.progress {
+		background-color: $light-grey;
+		.progress-bar {
+			background-color: $green;
+		}
+		.selectedProgress {
+			background-color: $dark-green !important;
+		}
+		.over100 {
+			background-color: $orange !important;
+		}
+	}
 }
 
 .progress {
-	background-color: $light-grey;
 	position: relative;
 	width: 98%;
 	height: 24px;
-}
+	background-color: $light-grey;
 
-.percentage {
-	position: absolute;
-	text-align: center;
-	width: 100%;
-	height: 100;
+	.progress-bar {
+		position: absolute;
+		color: $black;
+		text-align: center;
+		opacity: 1;
+		width: 100%;
+		height: 100%;
+		padding: 10px;
+	}
+
+	.selectedProgress {
+		border-bottom: 3px outset;
+		transition-property: all;
+		transition-duration: .6s;
+		transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+	}
+
+	.percentage {
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		height: 100;
+		text-shadow: -1px 0 $light-grey, 0 1px $light-grey, 1px 0 $light-grey, 0 -1px $light-grey;
+	}
 }

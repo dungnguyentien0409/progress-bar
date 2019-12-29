@@ -4,15 +4,23 @@
 .noPadding {
   padding: 0px; }
 
-.container {
-  width: 50%;
-  position: absolute;
-  left: 25%;
-  background-color: #d9e6f2;
-  padding: 5px;
-  position: relative; }
-
 .title {
   text-align: center;
   font-weight: bold;
   position: relative; }
+
+.container {
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  padding: 5px;
+  position: relative; }
+
+.blue {
+  background-color: #d9e6f2; }
+
+.yellow {
+  background-color: #ffe699; }
+
+.green {
+  background-color: #c6ecc6; }

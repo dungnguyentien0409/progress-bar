@@ -1,17 +1,30 @@
+.blue .button-container .button {
+  background-color: #0088cc; }
+
+.blue .button-container .button:hover {
+  background-color: #006699; }
+
+.yellow .button-container .button {
+  background-color: #e6ac00; }
+
+.yellow .button-container .button:hover {
+  background-color: #806000; }
+
+.green .button-container .button {
+  background-color: green; }
+
+.green .button-container .button:hover {
+  background-color: #264d00; }
+
 .button-container {
   text-align: right;
   margin: 2px 3px 5px 0px; }
-
-.button {
-  width: 70px;
-  margin: 3px;
-  border-radius: 3px;
-  border: 2px outset;
-  background-color: #0088cc;
-  color: white;
-  -webkit-transition-duration: 0.4s;
-  /* Safari */
-  transition-duration: 0.4s; }
-
-.button:hover {
-  background-color: #006699; }
+  .button-container .button {
+    width: 70px;
+    margin: 3px;
+    border-radius: 3px;
+    border: 2px outset;
+    color: white;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s; }

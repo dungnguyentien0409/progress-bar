@@ -1,0 +1,18 @@
+@import 'color';
+
+.theme {
+    text-align: left;
+    margin: 10px;
+    .radio {
+        margin: 0px 6px 0px 15px;
+    }
+    .label-blue {
+        color: $blue; 
+    }
+    .label-yellow {
+        color: $yellow;
+    }
+    .label-green {
+        color: $green;
+    }
+}

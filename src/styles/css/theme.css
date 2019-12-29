@@ -1,0 +1,11 @@
+.theme {
+  text-align: left;
+  margin: 10px; }
+  .theme .radio {
+    margin: 0px 6px 0px 15px; }
+  .theme .label-blue {
+    color: #0088cc; }
+  .theme .label-yellow {
+    color: #e6ac00; }
+  .theme .label-green {
+    color: green; }

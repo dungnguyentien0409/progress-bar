@@ -1,21 +1,53 @@
 @import 'color';
 
+.blue {
+	.button-container {
+		.button {
+			background-color: $blue;
+		}
+
+		.button:hover {
+			background-color: $dark-blue;
+		}
+	}
+}
+
+.yellow {
+	.button-container {
+		.button {
+			background-color: $yellow;
+		}
+
+		.button:hover {
+			background-color: $dark-yellow;
+		}
+	}
+}
+
+.green {
+	.button-container {
+		.button {
+			background-color: $green;
+		}
+
+		.button:hover {
+			background-color: $dark-green;
+		}
+	}
+}
+
 .button-container {
 	text-align: right;
 	margin: 2px 3px 5px 0px;
-}
 
-.button {
-	width: 70px;
-	margin: 3px;
-	border-radius: 3px;
-	border: 2px outset;
-	background-color: $blue;
-	color: $white;
-	-webkit-transition-duration: 0.4s; /* Safari */
-  	transition-duration: 0.4s;
-}
-
-.button:hover {
-	background-color: $dark-blue;
+	.button {
+		width: 70px;
+		margin: 3px;
+		border-radius: 3px;
+		border: 2px outset;
+		
+		color: $white;
+		-webkit-transition-duration: 0.4s; /* Safari */
+		  transition-duration: 0.4s;
+	}
 }
