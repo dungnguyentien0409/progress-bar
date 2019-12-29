@@ -1,4 +1,5 @@
 var MODULE = (function(my) {
+    my.app_title = "Progress Bars Demo";
     my.buttons = [];
     my.bars = [];
     my.limit = 0;
