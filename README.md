@@ -10,7 +10,7 @@ Test by Jasmine framework
 
 I also include the node_modules
 
-To run it, please get all and open the index.html
+To run it, please get all and open the "index.html"
 and that's all step
 
 To run the test case, please open the "test/SpecRunner.html"
