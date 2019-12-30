@@ -16,7 +16,8 @@ and that's all step
 To run the test case, please open the "test/SpecRunner.html"
 
 All test cases are inside "test/spec" to test all js files in "src/scripts"
-
+# Live Demo
+http://peaceful-river-89605.herokuapp.com/
 # Features:
 Read data from the endpoint: http://pb-api.herokuapp.com/bars
 
