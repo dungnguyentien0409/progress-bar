@@ -1,3 +1,5 @@
+"use strict";
+
 var MODULE = (function(my) {
     my.app_title = "Progress Bars Demo";
     my.buttons = [];

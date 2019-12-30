@@ -1,3 +1,5 @@
+"use strict";
+
 var MODULE = (function(my) {
     var _this = my;
 
@@ -19,7 +21,7 @@ var MODULE = (function(my) {
             radio.setAttribute("class", "radio");
             if (i == 0) {
                 //default value
-                currentTheme = color;
+                _this.currentTheme = color;
                 radio.setAttribute("checked", "checked");
                 _this.container.className += (" " + color);
             }
@@ -40,10 +42,10 @@ var MODULE = (function(my) {
     }
 
     my.changeTheme = function(color) {
-        if (color != currentTheme) {
-            _this.container.classList.remove(currentTheme);
+        if (color != _this.currentTheme) {
+            _this.container.classList.remove(_this.currentTheme);
 
-            currentTheme = color;
+            _this.currentTheme = color;
             _this.container.className += (" " + color);
         }
     }

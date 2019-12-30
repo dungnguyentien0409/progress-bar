@@ -1,3 +1,5 @@
+"use strict";
+
 var MODULE = (function(my) {
     var _this = my;
     
