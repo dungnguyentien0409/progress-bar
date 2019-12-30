@@ -19,12 +19,8 @@ var MODULE = (function(my) {
             var percentage = document.createElement("div");
             percentage.setAttribute("id", bar.id + "percentage");
             percentage.setAttribute("class", "percentage");
-            percentage.innerHTML = bar.percentage + "%";
-
-            var tooltip = document.createElement("span");
-            tooltip.setAttribute("id", bar.id + "tooltip");
-            tooltip.setAttribute("class", "tooltiptext");
-            tooltip.innerHTML += ("Value: " + bar.value + "- Limit: " + _this.limit);
+            percentage.innerHTML = bar.percentage + "%" 
+                                   + " - Value: " + bar.value;
 
             if (i == 0) {
                 progressBar.className += " selectedProgress";
@@ -32,9 +28,13 @@ var MODULE = (function(my) {
 
             progress.appendChild(progressBar);
             progress.appendChild(percentage);
-            progress.appendChild(tooltip);
             progressBarContainer.appendChild(progress);
         }
+
+        var limit = document.createElement("div");
+        limit.setAttribute("class", "w3-row limit w3-mobile");
+        limit.innerHTML = "Limit value: " + _this.limit;
+        progressBarContainer.appendChild(limit);
 
         _this.container.appendChild(progressBarContainer);
     }

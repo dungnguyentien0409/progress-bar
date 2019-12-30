@@ -51,7 +51,9 @@ var MODULE = (function(my) {
                 else {
                     progressBar.style.width = bar.percentage + "%";
                 }
-                percentage.innerHTML = bar.percentage + "%";
+                percentage.innerHTML = bar.percentage + "%"
+                                       + " - Value: " + bar.value;
+
                 break;
             }
         }
