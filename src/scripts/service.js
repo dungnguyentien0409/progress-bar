@@ -16,14 +16,18 @@ var MODULE = (function(my) {
     }
 
     my.getBars = function() {
-        var request = new XMLHttpRequest();
-        request.open('GET', 'http://pb-api.herokuapp.com/bars', true);
-        request.onload = function () {
-            _this.parseData(JSON.parse(this.response));
-            _this.generate();
-        }
+        var promise = new Promise(function(resolve, reject) {
+            var request = new XMLHttpRequest();
 
-        request.send();
+            request.open('GET', 'http://pb-api.herokuapp.com/bars', true);
+            request.onload = function () {
+                _this.parseData(JSON.parse(this.response));
+                console.log(this.response);
+                resolve();
+            }
+            request.send();
+        })
+        return promise;
     }
 
     return my;

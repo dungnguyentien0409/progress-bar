@@ -13,5 +13,16 @@ var MODULE = (function(my) {
 })(MODULE || {});
 
 (function() {
-    MODULE.getBars();
+    var _this = MODULE;
+    var callback = {
+        success: function(data) {
+            _this.generate();
+        },
+        error: function(data) {
+            console.log(data);
+        }
+        
+    };
+
+    MODULE.getBars().then(callback.success, callback.error);
 })();
