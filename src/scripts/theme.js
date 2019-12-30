@@ -18,6 +18,7 @@ var MODULE = (function(my) {
 
             var color = colors[i];
             var radio = document.createElement("input");
+            radio.setAttribute("id", color + "radio");
             radio.setAttribute("name", "radioTheme");
             radio.setAttribute("type", "radio");
             radio.setAttribute("value", color);
@@ -34,6 +35,7 @@ var MODULE = (function(my) {
             });
             
             var label = document.createElement("label");
+            label.setAttribute("for", color + "radio");
             label.setAttribute("class", "label-" + color);
             label.innerHTML = color;
 
