@@ -9,7 +9,7 @@ var MODULE = (function(my) {
         for(var i = 0; i < _this.bars.length; i++) {
             var bar = _this.bars[i];
             var progress = document.createElement("div");
-            progress.setAttribute('class', 'w3-row progress no-padding-left');
+            progress.setAttribute('class', 'w3-row progress no-padding-left tooltip');
 
             var progressBar = document.createElement("div");
             progressBar.setAttribute("id", bar.id);
@@ -21,12 +21,18 @@ var MODULE = (function(my) {
             percentage.setAttribute("class", "percentage");
             percentage.innerHTML = bar.percentage + "%";
 
+            var tooltip = document.createElement("span");
+            tooltip.setAttribute("id", bar.id + "tooltip");
+            tooltip.setAttribute("class", "tooltiptext");
+            tooltip.innerHTML += ("Value: " + bar.value + "- Limit: " + _this.limit);
+
             if (i == 0) {
                 progressBar.className += " selectedProgress";
             }
 
             progress.appendChild(progressBar);
             progress.appendChild(percentage);
+            progress.appendChild(tooltip);
             progressBarContainer.appendChild(progress);
         }
 

@@ -33,16 +33,18 @@ var MODULE = (function(my) {
     
         for (var bar of _this.bars) {
             if (bar.id == id) {
-                bar.percentage += parseInt(value);
+                bar.value += parseInt(value);
                 progressBar.classList.remove("over100");
                
-                if (bar.percentage > 100) {
+                if (bar.value > _this.limit) {
                     progressBar.className += " over100";
                 }
-                else if (bar.percentage < 0) {
-                    bar.percentage = 0;
+                else if (bar.value < 0) {
+                    bar.value = 0;
                 }
                 
+                bar.percentage = Math.floor(bar.value / _this.limit * 100);
+
                 if (bar.percentage > 100) {
                     progressBar.style.width = 100 + "%";
                 }
