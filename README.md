@@ -2,14 +2,20 @@
 I am Chris Dung Nguyen
 
 This is the Front End side progress bar implemented by me.
-I use vanilla Javascript, HTML/CSS, SCSS.
+It is reponsive solution, I use vanilla Javascript, HTML/CSS, SCSS.
 
 The data is read from the endpoint: http://pb-api.herokuapp.com/bars
+
+Test by Jasmine framework
 
 I also include the node_modules
 
 To run it, please get all and open the index.html
 and that's all step
+
+To run the test case, please open the "test/SpecRunner.html"
+
+All test cases are inside "test/spec" to test all js files in "src/scripts"
 
 # Features:
 Read data from the endpoint: http://pb-api.herokuapp.com/bars
