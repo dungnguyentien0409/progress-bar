@@ -1,3 +1,5 @@
+"use strict";
+
 describe('Testing the functionality, this is select', ()=>{
     it('create select successfully', () => {
         let module = MODULE;

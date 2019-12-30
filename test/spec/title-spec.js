@@ -1,3 +1,5 @@
+"use strict";
+
 describe('Testing the functionality, this is title', ()=>{
     it('create title successfully', () => {
         let module = MODULE;

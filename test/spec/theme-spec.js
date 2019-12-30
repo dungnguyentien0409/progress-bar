@@ -1,3 +1,5 @@
+"use strict";
+
 describe('Testing the functionality, this is theme', ()=>{
     it('create theme successfully', () => {
         let module = MODULE;

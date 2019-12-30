@@ -1,3 +1,5 @@
+"use strict";
+
 describe('Testing the functionality, this is button', ()=>{
     it('create button successfully', () => {
         let module = MODULE;

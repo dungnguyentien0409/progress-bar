@@ -1,3 +1,5 @@
+"use strict";
+
 describe('Testing the functionality, this is service', ()=>{
     it('create service successfully', () => {
         let module = MODULE;
