@@ -53,7 +53,7 @@
     transition-duration: .6s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
   .progress .percentage {
-    font-size: 10px;
+    font-size: 12px;
     padding: 4px;
     position: absolute;
     text-align: center;
