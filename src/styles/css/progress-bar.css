@@ -49,7 +49,7 @@
     height: 100%;
     padding: 10px; }
   .progress .selectedProgress {
-    border-bottom: 3px outset;
+    border-bottom: 3px outset #f1f1f1;
     transition-property: all;
     transition-duration: .6s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }

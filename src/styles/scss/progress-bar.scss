@@ -75,7 +75,7 @@
 	}
 
 	.selectedProgress {
-		border-bottom: 3px outset;
+		border-bottom: 3px outset $light-grey;
 		transition-property: all;
 		transition-duration: .6s;
 		transition-timing-function: cubic-bezier(0, 1, 0.5, 1);

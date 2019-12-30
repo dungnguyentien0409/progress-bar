@@ -1,5 +1,6 @@
 var MODULE = (function(my) {
     var _this = my;
+    
     my.parseData = function(response) {
         _this.buttons = response["buttons"];
         _this.limit = parseInt(response["limit"]);
