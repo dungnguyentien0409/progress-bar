@@ -2,11 +2,12 @@
   background-color: #f1f1f1; }
 
 .select-container {
-  text-align: right; }
+  text-align: left; }
   .select-container .select {
     width: 130px;
     height: 32px;
     border: 3px outset;
     border-radius: 3px;
     padding: 2px;
-    position: relative; }
+    position: relative;
+    margin: 0px 0px 8px 12px; }

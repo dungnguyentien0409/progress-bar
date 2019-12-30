@@ -37,10 +37,10 @@
 
 .progress {
   position: relative;
-  width: 98%;
-  height: 24px;
+  width: 91%;
+  height: 25px;
   background-color: #f1f1f1;
-  margin: 5px 0px 5px 12px; }
+  margin: 6px 0px 6px 12px; }
   .progress .progress-bar {
     position: absolute;
     color: black;

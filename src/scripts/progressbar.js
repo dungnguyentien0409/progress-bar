@@ -9,7 +9,7 @@ var MODULE = (function(my) {
         for(var i = 0; i < _this.bars.length; i++) {
             var bar = _this.bars[i];
             var progress = document.createElement("div");
-            progress.setAttribute('class', 'w3-row progress no-padding-left w3-mobile');
+            progress.setAttribute('class', 'w3-row progress no-padding-left');
 
             var progressBar = document.createElement("div");
             progressBar.setAttribute("id", bar.id);

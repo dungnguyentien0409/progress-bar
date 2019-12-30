@@ -7,13 +7,9 @@ var MODULE = (function(my) {
         var selectContainer = document.createElement("div");
         selectContainer.setAttribute("class", "w3-row select-container margin");
 
-        var div = document.createElement("div");
-        div.setAttribute("class", "w3-twothird w3-container");
-        selectContainer.appendChild(div);
-
         var select = document.createElement("select");
         select.setAttribute("id", "selectProgressBar");
-        select.setAttribute("class", "w3-thrid select margin")
+        select.setAttribute("class", "select")
 
         for (var i = 0; i < _this.bars.length; i++) {
             var bar = _this.bars[i];
