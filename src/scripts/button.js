@@ -5,20 +5,23 @@ var MODULE = (function(my) {
 
     my.generateButton = function() {
         var btnContainer = document.createElement("div");
-        btnContainer.setAttribute("class", "button-container");
+        btnContainer.setAttribute("class", "w3-row");
 
+        var btnGroup = document.createElement("div");
+        btnGroup.setAttribute("class", "button-container");
         for (let value of _this.buttons) {
             var button = document.createElement("button");
-            button.setAttribute("class", "button");
+            button.setAttribute("class", "button w3-mobile");
             button.innerHTML = value;
 
             button.addEventListener("click", function() {
                 _this.onClick(value)
             });
 
-            btnContainer.appendChild(button);
+            btnGroup.appendChild(button);
         }
 
+        btnContainer.appendChild(btnGroup);
         _this.container.appendChild(btnContainer);
     }
 

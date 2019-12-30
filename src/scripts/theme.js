@@ -13,6 +13,9 @@ var MODULE = (function(my) {
         var colors = ["blue", "yellow", "green"];
 
         for (var i = 0; i < colors.length; i++) {
+            var radioContainer = document.createElement("span");
+            radioContainer.setAttribute("class", "w3-mobile");
+
             var color = colors[i];
             var radio = document.createElement("input");
             radio.setAttribute("name", "radioTheme");
@@ -34,8 +37,9 @@ var MODULE = (function(my) {
             label.setAttribute("class", "label-" + color);
             label.innerHTML = color;
 
-            theme.appendChild(radio);
-            theme.appendChild(label);
+            radioContainer.appendChild(radio);
+            radioContainer.appendChild(label);
+            theme.appendChild(radioContainer);
         }
 
         _this.container.appendChild(theme);

@@ -7,7 +7,7 @@ var MODULE = (function(my) {
         for(var i = 0; i < _this.bars.length; i++) {
             var bar = _this.bars[i];
             var progress = document.createElement("div");
-            progress.setAttribute('class', 'progress margin');
+            progress.setAttribute('class', 'w3-row margin progress noPadding');
 
             var progressBar = document.createElement("div");
             progressBar.setAttribute("id", bar.id);
