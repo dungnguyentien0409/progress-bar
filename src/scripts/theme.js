@@ -5,7 +5,7 @@ var MODULE = (function(my) {
 
     my.generateThemeOption = function() {
         var theme = document.createElement("div");
-        theme.setAttribute("class", "theme");
+        theme.setAttribute("class", "theme margin");
         var title = document.createElement("label");
         title.innerHTML = "Theme: ";
         theme.appendChild(title);

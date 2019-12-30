@@ -5,10 +5,10 @@ var MODULE = (function(my) {
 
     my.generateButton = function() {
         var btnContainer = document.createElement("div");
-        btnContainer.setAttribute("class", "w3-row");
+        btnContainer.setAttribute("class", "w3-row margin");
 
         var btnGroup = document.createElement("div");
-        btnGroup.setAttribute("class", "button-container");
+        btnGroup.setAttribute("class", "button-container margin");
         for (let value of _this.buttons) {
             var button = document.createElement("button");
             button.setAttribute("class", "button w3-mobile");

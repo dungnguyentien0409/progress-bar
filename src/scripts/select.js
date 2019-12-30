@@ -5,7 +5,7 @@ var MODULE = (function(my) {
 
     my.generateSelection = function() {
         var selectContainer = document.createElement("div");
-        selectContainer.setAttribute("class", "w3-row select-container");
+        selectContainer.setAttribute("class", "w3-row select-container margin");
 
         var div = document.createElement("div");
         div.setAttribute("class", "w3-twothird w3-container");

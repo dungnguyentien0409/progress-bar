@@ -1,18 +1,26 @@
 @import 'color';
 
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+.full-screen {
+	height: 100%;
+	margin: 0;
+}
+
 .margin {
 	margin: 8px;
 }
 
-.noPadding {
-	padding: 0px !important;
+.no-padding-left {
+	padding-left: 0px !important;
 }
 
 .container {
-	width: 50%;
-	position: absolute;
-	left: 25%;
-	padding: 5px;
+	height: 100%;
+	padding: 8px;
 	position: relative;
 }
 

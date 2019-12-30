@@ -2,16 +2,18 @@
 
 var MODULE = (function(my) {
     var _this = my;
+    var progressBarContainer = document.createElement("div");
+    progressBarContainer.setAttribute("class", "w3-row margin w3-mobile");
 
     my.generateProgressBars = function() {
         for(var i = 0; i < _this.bars.length; i++) {
             var bar = _this.bars[i];
             var progress = document.createElement("div");
-            progress.setAttribute('class', 'w3-row margin progress noPadding');
+            progress.setAttribute('class', 'w3-row progress no-padding-left w3-mobile');
 
             var progressBar = document.createElement("div");
             progressBar.setAttribute("id", bar.id);
-            progressBar.setAttribute("class", "w3-container progress-bar noPadding");
+            progressBar.setAttribute("class", "progress-bar no-padding-left");
             progressBar.setAttribute("style", "width:" + bar.percentage + "%");
 
             var percentage = document.createElement("div");
@@ -25,8 +27,10 @@ var MODULE = (function(my) {
 
             progress.appendChild(progressBar);
             progress.appendChild(percentage);
-            _this.container.appendChild(progress);
+            progressBarContainer.appendChild(progress);
         }
+
+        _this.container.appendChild(progressBarContainer);
     }
 
     return my;
