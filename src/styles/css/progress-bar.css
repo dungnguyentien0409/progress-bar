@@ -7,6 +7,9 @@
 .blue .progress:hover .progress-bar {
   background-color: #4399bb; }
 
+.blue .progress:hover .over100 {
+  background-color: #cc8500 !important; }
+
 .yellow .progress .progress-bar {
   background-color: #e6ac00; }
 
@@ -15,6 +18,9 @@
 
 .yellow .progress:hover .progress-bar {
   background-color: #806000; }
+
+.yellow .progress:hover .over100 {
+  background-color: #cc8500 !important; }
 
 .green .progress {
   background-color: #f1f1f1; }
@@ -25,6 +31,9 @@
 
 .green .progress:hover .progress-bar {
   background-color: #264d00; }
+
+.green .progress:hover .over100 {
+  background-color: #cc8500 !important; }
 
 .progress {
   position: relative;

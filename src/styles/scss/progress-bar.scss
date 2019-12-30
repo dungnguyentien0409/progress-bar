@@ -13,6 +13,9 @@
 		.progress-bar {
 			background-color: $dark-sky;
 		}
+		.over100 {
+			background-color: $dark-orange !important;
+		}
 	}
 }
 
@@ -28,6 +31,9 @@
 	.progress:hover {
 		.progress-bar {
 			background-color: $dark-yellow;
+		}
+		.over100 {
+			background-color: $dark-orange !important;
 		}
 	}
 }
@@ -45,6 +51,9 @@
 	.progress:hover {
 		.progress-bar {
 			background-color: $dark-green;
+		}
+		.over100 {
+			background-color: $dark-orange !important;
 		}
 	}
 }
