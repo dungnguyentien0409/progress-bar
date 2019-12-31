@@ -14,11 +14,20 @@ var MODULE = (function(my) {
     return my;
 })(MODULE || {});
 
+var LOADER = (function(my) {
+    return my;
+})(LOADER || {});
+
 (function() {
     var _this = MODULE;
+    var loader = LOADER;
+
+    loader.generateLoader();
+
     var callback = {
         success: function(data) {
             _this.generate();
+            loader.hideLoader();
         },
         error: function(data) {
             console.log(data);
@@ -28,3 +37,8 @@ var MODULE = (function(my) {
 
     MODULE.getBars().then(callback.success, callback.error);
 })();
+
+function createLoader() {
+    var loader = document.createElement("div");
+    loader.setAttribute("class", "loader");
+}
